@@ -1,0 +1,60 @@
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 800px;
+    max-width: 900px;
+    margin: 0 auto ;
+
+}
+
+.content-header{
+    display: flex;
+    width: 100%;
+}
+
+.content-city_name{
+    display: flex;
+    width: 100%;
+
+    font-weight: 500;
+    font-size: 50px;
+
+    margin: 20px 0 ;
+}
+
+.content-header-temp{
+    font-weight: 500;
+    font-size: 100px;
+    margin: 0;
+}
+
+.content-header-left{
+    display: flex;
+    align-items: flex-start;
+}
+
+.content-header-day_of_week {
+    font-size: 30px;
+    padding: 20px 10px 0 10px;
+
+    border-right: 1px solid black;
+}
+
+.data_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content-header-right{
+    display:inline-block;
+    margin-left: 10px;
+}
+
+.content-header-main{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+

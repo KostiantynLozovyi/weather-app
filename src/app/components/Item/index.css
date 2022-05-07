@@ -1,0 +1,13 @@
+.data_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+
+    font-family: 'Montserrat',sans-serif;
+    
+}
+
+.data-item-icon {
+}
