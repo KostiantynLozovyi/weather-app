@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, KeyboardEvent, KeyboardEventHandler, useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchTasks } from "../../../store/actions/actions";
 import "./index.css";
@@ -13,7 +13,10 @@ function Header() {
     setInput(e.target.value);
 
   }
-  const pressKey = () => {
+  const pressKey : KeyboardEventHandler<HTMLInputElement> = (e) => {
+    if (e.key === 'Enter'){
+      handleClickCityName()
+    }
   }
   
   const handleClickCityName = () => {
@@ -34,6 +37,7 @@ function Header() {
                 placeholder="Enter City"
                 className="input"
                 value={input}
+                onKeyPress={pressKey}
                 onChange={(e) => handleChangeCityName(e)}
               />
               <span className="focus-border"></span>

@@ -25,9 +25,6 @@ export default function Content() {
     dispatch(fetchTasks('Kyiv'));
   }, [dispatch]);
 
-console.log(error,'1');
-console.log(data,'!data');    
-
   return (
     <>
       {loading || error ? (

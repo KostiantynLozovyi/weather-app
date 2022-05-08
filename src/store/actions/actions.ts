@@ -6,7 +6,7 @@ export const GET_POSTS_FAILURE = 'GET_POSTS_FAILURE'
 
 interface getDataActionInterface {  
     type: string;
-    payload?: IData;
+    payload: IData | null;
 }
 
 export type contentData = getDataActionInterface
@@ -26,13 +26,14 @@ export function fetchTasks(input:string) {
         try {
             const response = await fetch(GET_HOST(input));
             const data = await response.json();
-            if (typeof data.message !== 'string' ){
-                dispatch(getDataSuccess(data))
-            } else {
-                alert(data.message)
+            console.log(response.status)
+            if (response.status !== 200 ){
+                throw new Error(data.message)
             }
+            dispatch(getDataSuccess(data))
+
         } catch (error) {
-            alert('Error')
+            alert(error)
         } 
     };
 }
