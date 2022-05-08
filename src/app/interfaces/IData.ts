@@ -1,4 +1,5 @@
 export interface IData {
+    message: string,
     city: {
         coord: {
             lat: number;

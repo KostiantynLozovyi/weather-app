@@ -1,4 +1,4 @@
-import { ChangeEvent, EventHandler, SyntheticEvent, useEffect, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchTasks } from "../../../store/actions/actions";
 import "./index.css";
@@ -11,13 +11,15 @@ function Header() {
   
   const handleChangeCityName = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
-  };
 
+  }
+  const pressKey = () => {
+  }
+  
   const handleClickCityName = () => {
     dispatch(fetchTasks(input));
+    setInput('')
   };
-
-  console.info(input)
 
   return (
     <>
@@ -36,7 +38,7 @@ function Header() {
               />
               <span className="focus-border"></span>
             </div>
-            <button onClick={handleClickCityName}>Find location</button>
+            <button onClick={() =>handleClickCityName()}>Find location</button>
           </div>
         </div>
       </header>

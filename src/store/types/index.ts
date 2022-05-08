@@ -14,6 +14,6 @@ export interface initialStateInterface {
 
 export const store = createStore(
     rootReducer,
-    initialState,
+    // initialState,
     composeWithDevTools(applyMiddleware(thunk))
 );
